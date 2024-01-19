@@ -1,10 +1,16 @@
 import { useTransform } from "@/hooks/useTransform";
-import { Flex, Text, Heading, Input, Button } from "@chakra-ui/react";
+import { Flex, Text, Heading, Input, Button, Spinner } from "@chakra-ui/react";
 import { NextPage } from "next";
 
 const HomePage: NextPage = () => {
-	const { value, handleSubmit, handleChange, errorMessage, returnValue } =
-		useTransform();
+	const {
+		value,
+		handleSubmit,
+		handleChange,
+		errorMessage,
+		returnValue,
+		isLoading,
+	} = useTransform();
 
 	return (
 		<Flex
@@ -13,11 +19,10 @@ const HomePage: NextPage = () => {
 			alignItems="center"
 			h="100vh"
 			flexDirection="column"
+			textAlign="center"
 		>
-			<Heading textAlign="center">
-				Convert any decimal to a dollar amount!
-			</Heading>
-			<Text textAlign="center">
+			<Heading>Convert any decimal to a dollar amount!</Heading>
+			<Text>
 				Input any decimal amount and click "Transform" to see your input in a
 				string format.
 			</Text>
@@ -37,7 +42,10 @@ const HomePage: NextPage = () => {
 					type="number"
 				/>
 				<Button onClick={handleSubmit}>Transform my number!</Button>
-				{errorMessage && <Text>{errorMessage}</Text>}
+			</Flex>
+			<Flex height="50px" marginY="20px">
+				{isLoading && <Spinner />}
+				{errorMessage && <Text color="red">{errorMessage}</Text>}
 				{returnValue && <Text>{returnValue}</Text>}
 			</Flex>
 			<Text>

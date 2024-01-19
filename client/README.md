@@ -1,4 +1,18 @@
-## Getting Started
+## Purpose
+
+The purpose of this application is to create a user-friendly front end for the server. The user can input a number in the input field and on submission, the number is sent to the server and transformed into a string output.
+
+## Approach
+
+The developer (Jo Rocca) chose to use Next.js for this app, as it provides easy access to API endpoints, built in protection of environment variables, and type safety.
+
+The style library used in this app is Chakra UI, which allows for quick, clean styling of this simplistic app.
+
+Most functionality comes from the useTransform hook, which allows for clean code with separation of concerns (i.e. state management, API logic, and UI are located in different places).
+
+The application also includes loading states and error handling for a seamless user experience.
+
+## Running the Application
 
 Install dependencies by running `yarn`
 
@@ -8,16 +22,19 @@ Then, run the development server:
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the web page. This web page is mobile responsive.
 
-## Learn More
+## Connecting to Server
 
-To learn more about Next.js, take a look at the following resources:
+This repo also contains an ASP.NET server that is used in the pages/api directory.
+To connect to this server, set the following env variable:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+SERVER_ENDPOINT="http://localhost:5000"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Testing
+Without input, the page will display an error message
 
 ## Deploy on Vercel
 
