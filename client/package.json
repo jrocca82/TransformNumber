@@ -1,0 +1,50 @@
+{
+  "name": "@shibuya/client",
+  "description": "Nextjs client for repo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "env INTEGRATION_TEST_MODE=true TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register -r tsconfig-paths/register 'tests/**/*.ts'"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/next-js": "^2.1.4",
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.2",
+    "@vercel/analytics": "^1.0.1",
+    "axios": "^1.6.5",
+    "framer-motion": "^10.12.17",
+    "next": "^14.0.1",
+    "next-connect": "0.13.0",
+    "next-pwa": "^5.6.0",
+    "next-seo": "^6.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-redux": "^9.0.4",
+    "react-select": "^5.8.0",
+    "recoil": "^0.7.7",
+    "zustand": "^4.3.9"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.0.11",
+    "@types/supertest": "^2.0.12",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nextjs-http-supertest": "^1.0.12",
+    "start-server-and-test": "^2.0.0",
+    "supertest": "^6.3.3",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^4.9.5"
+  }
+}

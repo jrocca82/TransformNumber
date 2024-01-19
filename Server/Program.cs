@@ -1,14 +1,10 @@
-
-using Microsoft.EntityFrameworkCore;
-using server.Models;
+using Humanizer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<InputContext>(opt =>
-    opt.UseInMemoryDatabase("UserInput"));
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -22,28 +18,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateTime.Now.AddDays(index),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+// The input can be any decimal but will be rounded to the nearest cent
+app.MapPost("/input", (float input) =>
+    {
+        input = (float)Math.Round(input, 2);
+        string dollars = ((int)input).ToWords();
+        string cents = ((int)((input - (int)input) * 100)).ToWords();
+        var transformed = $"{dollars} dollars and {cents} cents";
+        return new TransformedInput(transformed);
+    })
+    .WithName("TransformInput");
 
 app.Run();
 
-record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+record TransformedInput(string Transformed);
