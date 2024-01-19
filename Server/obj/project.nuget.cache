@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oL5fadv8Z5NkeI3wFU17WNMy3SwmMfL4iXGjnczt516a1RdZZNTYxDoCekTKOHwS6uGEKvjQZdeypnPUNF2pjQ==",
-  "success": false,
-  "projectFilePath": "/Users/jorocca/Desktop/PD/TechTest/Server/Server.csproj",
+  "dgSpecHash": "b1BUOgr2hWn8oO7npWtO4mHpUxnEjhGThQw9UIJR7KKeEwS48EWUMZns3e2AUu6h28EdV84LXVr3hoIDL/m7RA==",
+  "success": true,
+  "projectFilePath": "/Users/jorocca/Desktop/PD/TechTest/server/server.csproj",
   "expectedPackageFiles": [
     "/Users/jorocca/.nuget/packages/libuv/1.9.1/libuv.1.9.1.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.aspnetcore.hosting/1.1.2/microsoft.aspnetcore.hosting.1.1.2.nupkg.sha512",
@@ -25,11 +25,12 @@
     "/Users/jorocca/.nuget/packages/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.diasymreader.native/1.4.1/microsoft.diasymreader.native.1.4.1.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore/1.1.2/microsoft.entityframeworkcore.1.1.2.nupkg.sha512",
-    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.design/1.1.1/microsoft.entityframeworkcore.design.1.1.1.nupkg.sha512",
+    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.design/1.1.2/microsoft.entityframeworkcore.design.1.1.2.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.inmemory/1.1.1/microsoft.entityframeworkcore.inmemory.1.1.1.nupkg.sha512",
-    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.relational/1.1.1/microsoft.entityframeworkcore.relational.1.1.1.nupkg.sha512",
-    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.relational.design/1.1.1/microsoft.entityframeworkcore.relational.design.1.1.1.nupkg.sha512",
-    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.sqlserver/1.1.1/microsoft.entityframeworkcore.sqlserver.1.1.1.nupkg.sha512",
+    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.relational/1.1.2/microsoft.entityframeworkcore.relational.1.1.2.nupkg.sha512",
+    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.relational.design/1.1.2/microsoft.entityframeworkcore.relational.design.1.1.2.nupkg.sha512",
+    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.sqlserver/1.1.2/microsoft.entityframeworkcore.sqlserver.1.1.2.nupkg.sha512",
+    "/Users/jorocca/.nuget/packages/microsoft.entityframeworkcore.tools/1.1.1/microsoft.entityframeworkcore.tools.1.1.1.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.extensions.caching.abstractions/1.1.1/microsoft.extensions.caching.abstractions.1.1.1.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/microsoft.extensions.caching.memory/1.1.1/microsoft.extensions.caching.memory.1.1.1.nupkg.sha512",
@@ -107,7 +108,7 @@
     "/Users/jorocca/.nuget/packages/system.componentmodel.annotations/4.3.0/system.componentmodel.annotations.4.3.0.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/system.data.common/4.3.0/system.data.common.4.3.0.nupkg.sha512",
-    "/Users/jorocca/.nuget/packages/system.data.sqlclient/4.3.0/system.data.sqlclient.4.3.0.nupkg.sha512",
+    "/Users/jorocca/.nuget/packages/system.data.sqlclient/4.3.1/system.data.sqlclient.4.3.1.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/system.diagnostics.contracts/4.3.0/system.diagnostics.contracts.4.3.0.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
     "/Users/jorocca/.nuget/packages/system.diagnostics.diagnosticsource/4.3.1/system.diagnostics.diagnosticsource.4.3.1.nupkg.sha512",
@@ -201,24 +202,6 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.Composition 1.0.27' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Composition",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.Design from 1.1.2 to 1.1.1. Reference the package directly from the project to select a different version. \n Server -> Microsoft.VisualStudio.Web.CodeGeneration.Design 1.1.1 -> Microsoft.VisualStudio.Web.CodeGenerators.Mvc 1.1.1 -> Microsoft.VisualStudio.Web.CodeGeneration 1.1.1 -> Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore 1.1.1 -> Microsoft.EntityFrameworkCore.Design (>= 1.1.2) \n Server -> Microsoft.EntityFrameworkCore.Design (>= 1.1.1)",
-      "libraryId": "Microsoft.EntityFrameworkCore.Design",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.SqlServer from 1.1.2 to 1.1.1. Reference the package directly from the project to select a different version. \n Server -> Microsoft.VisualStudio.Web.CodeGeneration.Design 1.1.1 -> Microsoft.VisualStudio.Web.CodeGenerators.Mvc 1.1.1 -> Microsoft.VisualStudio.Web.CodeGeneration 1.1.1 -> Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore 1.1.1 -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.2) \n Server -> Microsoft.EntityFrameworkCore.SqlServer (>= 1.1.1)",
-      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
       "targetGraphs": [
         "net6.0"
       ]

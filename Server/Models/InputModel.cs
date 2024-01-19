@@ -1,6 +1,6 @@
-namespace Server.Models;
+namespace server.Models;
 
 public class InputModel
 {
-    public float Number { get; set; }
+    public float UserInput { get; set; }
 }

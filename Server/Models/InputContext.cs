@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Server.Models;
+namespace server.Models;
 
 public class InputContext : DbContext
 {
@@ -9,5 +9,5 @@ public class InputContext : DbContext
     {
     }
 
-    public DbSet<InputModel> TodoItems { get; set; } = null!;
+    public DbSet<InputModel> UserInput { get; set; } = null!;
 }
